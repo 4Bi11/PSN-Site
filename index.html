@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Playstation Network</title>
+    <link rel="icon" href="images/ps.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="interface_manipulation.js"></script>
+    <header>
+            <nav class="sony_bar">
+                <a class="SonyLogo" target="_blank" href="https://www.sony.com/">  <img src="images/sony.jpeg" loading="lazy" >
+                </a>
+            </nav>
+    </header>
+
+            <nav class="navigation_bar">
+                    <a class="pslogo"> <img src="images/blue_logo.jpeg" loading="lazy" alt="Ps Site"></a>
+                    <a>Games</a>
+                    <a>PS5</a>
+                    <a>PS4</a>
+                    <a>News</a>
+                    <a>Shop</a>
+                    <a>Help</a>
+                    <a class="signin_a"> <span class="signinspan"> Sign In</span></a>
+                    <a class="SearchButton"  href="#"> <img src="images/loupe.png" loading="lazy" > </a>
+            </nav>
+
+    <div class="root container">
+
+        <div class="NewGamesSectionPart">
+            
+            <picture class="newgames_background" >
+                <source srcset="background.jpeg" type="jpeg" media="(orientation: portrait)" />
+                <img id="newgames_wallpaper" loading="lazy" src="images/astrobotbackground.jpg" alt="background" width="960" height="540"/>
+            </picture>
+
+            <section class="NewGameDescriptionBack" id="newgamesbackcolor">
+                <div class="newgames_elements">
+                    <img class="GameLogo" id="GameLogo" loading="lazy" src="https://gmedia.playstation.com/is/image/SIEPDC/Astro-Bot-logo-en-01-23may24?$1200px--t$">
+                    <h1 id="newgame_name"> Astro Bot Is Back!</h1>
+                    <p id="newgame_p">When the PS5® mothership is attacked by ASTRO’s long-standing galactic nemesis, scrambling its wires and scattering the crew throughout space, only ASTRO can make things right! Setting off on his biggest mission yet, he needs your help to rescue the stranded crew and rebuild the mothership.</p>
+                    <a onclick="window.open('astrobot.html', '_blank');"  style="text-decoration: none;"> <span >Learn More</span> </a>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="slider_controls">
+            <a class="gameimg" href=# onclick="changeBackground('images/astrobotbackground.jpg', 'Astro Bot Is Back!', 'When the PS5® mothership is attacked by ASTRO’s long-standing galactic nemesis, scrambling its wires and scattering the crew throughout space, only ASTRO can make things right! Setting off on his biggest mission yet, he needs your help to rescue the stranded crew and rebuild the mothership.', 'radial-gradient(circle, #125be2, #2d1489)', 'https://gmedia.playstation.com/is/image/SIEPDC/Astro-Bot-logo-en-01-23may24?$1200px--t$' )"><picture> <img src="images/astrobotclickimage.png" alt="AstroBot">  </picture> </a>
+            <a class="gameimg" href=# onclick="changeBackground('images/tlou2background.jpg', 'The Last Of Us: Part 2 Remastered', 'New Game', 'radial-gradient(circle, #717171, #1e1e1e)', 'images/TLOU2_logo.png')"><picture> <img src="images/the-last-of-us-part-ii-remastered-3840x2160-18910.jpg" alt="LastOfUs2Remastered"> </picture> </a>
+            <a class="gameimg" href=# onclick="changeBackground('images/marvels-spider-man-2-background.jpeg', 'Marvel`s Spider-Man 2', 'Spider MAN', 'radial-gradient(circle, #e90a0a, #570303)', 'images/Spider-Man-Text.png' ); return false"><picture> <img src="images/marvels-spider-man-2-3840x2160-15681.jpg" alt="SpiderMan2"> </picture> </a>
+        </div>
+        <script>
+            function changeBackground(source, text_name, desc, color, image_src) {
+                const section = document.getElementById('newgames_wallpaper');
+                const text_logo = document.getElementById('GameLogo')
+                const name = document.getElementById('newgame_name')
+                const paragraph = document.getElementById('newgame_p')
+                const bg_color = document.getElementById('newgamesbackcolor')
+                const elements = document.getElementById('GameLogo')
+                let controls = document.getElementsByClassName('slider_controls')
+                section.src = source; 
+                name.textContent = text_name
+                paragraph.textContent = desc
+                bg_color.style.background= color
+                text_logo.src = image_src
+                elements.animate([{transform: 'translateY(-5%)', opacity:0.1}, {transform: 'translateY(0)', opacity:1}], {duration:800, easing:'ease-in-out', fill:"forwards"})
+                section.animate([{transform: 'translateY(-5%)', opacity:0.1}, {transform: 'translateY(0)', opacity:1}], {duration:800, easing:'ease-in-out', fill:"forwards"})
+            }
+        </script>
+
+        <h1 style="height: 10cm; background-color: rgb(127, 159, 255);"> aa</h1>
+
+        <footer class="site_footer">
+            <img class="psfooterlogo" src="images/psfooterlogo.jpg" >
+            
+            <nav>
+
+                <div> <!-- About Us -->
+                    <p> About Us</p>
+                    <ul>
+                        <li>About SIE</li>
+                        <li>Career</li>
+                        <li>Playstation Studios</li>
+                        <li>Playstation Productions</li>
+                        <li>Company</li>
+                    </ul>
+
+                </div>
+
+                <div> <!-- Products -->
+                
+                    <p>Products</p>
+                    <ul>
+                        <li>PS5</li>
+                        <li>PS4</li>
+                        <li>PS VR2</li>
+                        <li>PS Plus</li>
+                        <li>Accesories</li>
+                        <li>Games</li>
+                    </ul>
+                </div>
+    
+                <div> <!-- Values -->
+                    <p>Values</p>
+                    <ul>
+                        <li>Environment</li>
+                        <li>Accesibility</li>
+                        <li>Online Safety</li>
+                        <li>Diversity, equity & inclusion</li>
+                    </ul>
+                </div>
+    
+                
+                <div> <!-- Support -->
+                    <p>Support</p>
+                    <ul>
+                        <li>Support Hub</li>
+                        <li>PlayStation Safety</li>
+                        <li>PSN Status</li>
+                        <li>PlayStation Repairs</li>
+                        <li>Password Resets</li>
+                        <li>Manuals</li>
+                    </ul>
+                </div>
+    
+                <div> <!-- Resources -->
+                    <p>Resources</p>
+                    <ul>
+                        <li>PSN Terms Of Services</li>
+                        <li>PS Store cancellation policy</li>
+                        <li>Age ratings</li>
+                        <li>Health warning</li>
+                        <li>Developers</li>
+                        <li>Glossary</li>
+                    </ul>
+                </div>
+    
+                <div> <!-- Connect -->
+                    <p>Connect</p>
+                    <div>
+                   
+                    </div>
+                    <ul>
+                        <li>iOS app</li>
+                        <li>Android APP</li>
+                        <li>Join our playtesting program</li>
+                    </ul>
+                </div>
+
+            </nav>
+
+        </footer>
+
+
+
+
+    </div>
+
+</body>
+</html>
